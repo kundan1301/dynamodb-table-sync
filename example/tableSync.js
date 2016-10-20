@@ -1,14 +1,3 @@
-# Sync two or more dynamodb table
-
-###### dynamodb has limit on number of index. We can only create 5 global index 
-###### in dynaomodb. If your use case need more than 5 indexes, we have to create
-###### more than one replica of a table. To keep these table in sync you can use
-###### this module. This module can be used with  aws dynamodb stream trigger and
-###### aws lambda.
-
-####### How to use:
-
-```javascript
 const syncTable = require('dynamodb-table-sync').syncTable;
 var AWS = require('aws-sdk');
 exports.handler = function(event, context) {
@@ -22,5 +11,3 @@ exports.handler = function(event, context) {
 		context.succeed();
 	});
 }
-```
- 

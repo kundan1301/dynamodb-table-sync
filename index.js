@@ -1,5 +1,4 @@
 var train = require('async-train');
-
 function deleteItem(dynamodb,record,tableName,callback){
 	var attrMap = {};
 	for(var k in record.dynamodb.Keys){
@@ -12,8 +11,6 @@ function deleteItem(dynamodb,record,tableName,callback){
         callback(err,data);
     });
 }
-
-
 function updateItem(dynamodb,record,tableName,callback){
 	var params = {};
 	var primaryKeyMap = getPrimaryKeyMap(record.dynamodb.Keys);

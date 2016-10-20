@@ -6,18 +6,25 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies":{
-    "async-train":"1.0.4"
+  "dependencies": {
+    "async-train": "1.0.4"
   },
   "keywords": [
     "dynamodb",
     "sync",
     "table",
-    "stream"
+    "stream",
+    "lambda",
+    "trigger"
   ],
-  "author": {
-    "name":"Kundan Kumar",
-    "email":"kundan1302@gmail.com"
-    },
-  "license": "MIT"
+  "author": "Kundan Kumar <kundan1302@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kundan1301/dynamodb-table-sync.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kundan1301/dynamodb-table-sync/issues"
+  },
+  "homepage": "https://github.com/kundan1301/dynamodb-table-sync#readme"
 }
