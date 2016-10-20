@@ -5,6 +5,15 @@
 ###### How to use:
 
 ```javascript
+/*
+arg1: dynamodbMap => map of AWS.DynamoDB object and AWS region 
+arg2: config=> map of master table and array of map of slave table name and aws region of that table 
+arg3: event => event passed by lambda
+arg4: callback function
+
+see below code for more example
+*/
+
 const syncTable = require('dynamodb-table-sync').syncTable;
 var AWS = require('aws-sdk');
 exports.handler = function(event, context) {
