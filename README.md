@@ -20,9 +20,9 @@ exports.handler = function(event, context) {
 	var dynamodbMap = {};
 	dynamodbMap['us-east-1']=new AWS.DynamoDB({"endpoint":"https://dynamodb.us-east-1.amazonaws.com","region":"us-east-1"});
 	//dynamodbMap['eu-west-1']=new AWS.DynamoDB({"endpoint":"https://dynamodb.eu-west-1.amazonaws.com","region":"eu-west-1"});
+	
 	// test is the master table
-	// test1,test2,test2 is the replica table of test
-
+	// test1,test2,test3,test4 is the replica table of test
 	var config = {"test1":[{name:"test2",region:"us-east-1"},{name:"test3",region:"us-east-1"}/*,{name:"test4",region:"eu-west-1"}*/]}
 	syncTable(dynamodbMap,config,event,function(err,data){
 		err && console.log(err);
