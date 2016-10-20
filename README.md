@@ -1,6 +1,6 @@
 # Sync two and more dynamodb table
 
-###### dynamodb has limit on number of indexes. We can only create 5 global index in dynamodb. If our use case need more than 5 indexes, we will have to create more than one replica of a table. To keep these replica table in sync we can use this module. This module shoudl be used with aws dynamodb stream trigger and aws lambda.
+###### dynamodb has limit on number of indexes. We can only create 5 global index in dynamodb. If our use case need more than 5 indexes, we will have to create more than one replica of a table. To keep these replica table in sync we can use this module. This module should be used with aws dynamodb stream trigger and aws lambda.
 
 ###### How to use:
 
@@ -13,7 +13,7 @@ exports.handler = function(event, context) {
 	//dynamodbMap['eu-west-1']=new AWS.DynamoDB({"endpoint":"https://dynamodb.eu-west-1.amazonaws.com","region":"eu-west-1"});
 	// test is the master table
 	// test1,test2,test2 is the replica table of test
-	
+
 	var config = {"test1":[{name:"test2",region:"us-east-1"},{name:"test3",region:"us-east-1"}/*,{name:"test4",region:"eu-west-1"}*/]}
 	syncTable(dynamodbMap,config,event,function(err,data){
 		err && console.log(err);
