@@ -7,7 +7,7 @@
 ```javascript
 /*
 arg1: dynamodbMap => map of AWS.DynamoDB object and AWS region 
-arg2: config=> map of master table and array of map of slave table name and aws region of that table 
+arg2: config=> map of master table and array of map of replica table name and aws region of that table 
 arg3: event => event passed by lambda
 arg4: callback function
 
