@@ -1,0 +1,23 @@
+{
+  "name": "dynamodb-table-sync",
+  "version": "1.0.0",
+  "description": "sync two or more dynamodb table",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies":{
+    "async-train":"1.0.4"
+  },
+  "keywords": [
+    "dynamodb",
+    "sync",
+    "table",
+    "stream"
+  ],
+  "author": {
+    "name":"Kundan Kumar",
+    "email":"kundan1302@gmail.com"
+    },
+  "license": "MIT"
+}
